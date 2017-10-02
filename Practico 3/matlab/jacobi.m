@@ -24,22 +24,15 @@ P=(O*b);
 W=(O*(L+U));
 x(1,1)=100;
 k=0;
-while abs(g(1,1)-x(1,1))>e
+while abs(g(1,1)-x(1,1))>=e
     x=P+W*z;
     z=x;
     k=k+1;
-    error(k)=abs(g(1,1)-x(1,1));
 end
 disp('la aproximación encontrada es');
 disp(x);
 disp('el numero de iteraciones es: ');
 disp(k);
-
-%Grafica del error
-figure
-w=(1:k);  %Determinacion del vector para graficar
-plot(w,error(w));
-
 else
     disp('error la matriz no es cuadrada');
 end
