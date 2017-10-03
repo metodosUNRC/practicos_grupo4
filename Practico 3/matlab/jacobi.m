@@ -4,7 +4,7 @@ format long
 
 A=input('ingrese una matriz deseada: ');
 b=input('ingrese el lado derecho b: ');
-e=input('ingrese el error deseado: ');
+e=input('ingrese la tolerancia deseado: ');
 
 [m,n]=size(A);%esta funcion me da la cantidad de filas y columnas que tengo
 
@@ -24,7 +24,7 @@ P=(O*b);
 W=(O*(L+U));
 x(1,1)=100;
 k=0;
-while abs(g(1,1)-x(1,1))>e
+while abs(g(1,1)-x(1,1))>=e
     x=P+W*z;
     z=x;
     k=k+1;
