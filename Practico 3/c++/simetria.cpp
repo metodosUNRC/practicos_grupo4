@@ -1,4 +1,4 @@
-//     PROGRAMA PARA SABER SI LA MATRIX ES SIMETRICA
+//     PROGRAMA PARA SABER SI LA MATRIz ES SIMETRICA
 //    
 // Autores: Anelo Roman, Gonzales agustin               Fecha:29/09/2017
 // 
@@ -22,7 +22,7 @@ int main (){
 	cout<<"Indique la cantidad de columnas: "; cin>>columnas;
 	cout<<"Indique la cantidad de filas: "; cin>>filas;
 	
-	//condicion para que la matrix sea cuadrada.
+	//condicion para que la matriz sea cuadrada.
 	while (filas!=columnas){
 	
 	cout<<"las matrix no es cuadrada"<<endl; // aclaracion que la matriz no es cuadrada
