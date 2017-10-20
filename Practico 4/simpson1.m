@@ -57,10 +57,16 @@ else
 %En caso de seleccionar el metodo simple, realizara las siguientes
 %operaciones.
     h=(b-a)/2;
-    fa=f(a);
-    fb=f(b);
-    fc=4*f(a+h);
-    i=(h/3)*(fa+fb+fc);
+    s(1)=f(a);
+    s(3)=f(b);
+    s(2)=4*f(a+h);
+    i=(h/3)*sum(s);
+    
+    %grafica
+    figure
+    y=(a:0.1:b);
+    plot(y,f(y),'r-');
+    
     %Muestro los resultados obtenidos.
     disp('El valor aproximado de la integral es: ');
     disp(i);

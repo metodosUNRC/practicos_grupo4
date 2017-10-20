@@ -29,8 +29,9 @@ n=input('ingrese la cantidad de divisiones: ');
 
 s1=0;
 h=(a-b)/n;
-fa=f(a);
-fb=f(b);
+% modificacion para poder grabar las aproximaciones en un vector s
+s(n+1)=(f(a)/2);
+s(1)=(f(b)/2);
 
 %Aqui genero un vector que solo tiene como valores las divisiones que deseo
 %realizar sin tomar el primer y ultimo valor.
@@ -41,16 +42,21 @@ end
 %Una vez encontrado el vector x anterior solo selecciono los valores del
 %mismo hasta n-1.
 for j=1:n-1
-    s1=s1+f(x(j));
+    s(1+j)=f(x(j));
 end
 
 
 %Por ultimo realizo la siguiente operacion para encontrar el valor buscado
-I=(h/2)*(fa+fb+2*s1);
+I=h*(sum(s));
 
 %Muestro los resultados obtenidos.
 disp('El valor aproximado de la integral es: ');
 disp(I);
+
+%graficamos la funcion
+figure
+y=(b:h:a);
+plot(y,s);
 
 else
     %En caso de seleccionar el metodo simple, realizara las siguientes
